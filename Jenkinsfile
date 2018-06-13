@@ -5,7 +5,18 @@ pipeline {
         NameSpace='linwenjun'
     }
 
+    triggers {
+        pollSCM('* * * * *')
+    }
+
     stages {
+
+        stage('checkout') {
+            steps {
+                step([$class: 'WsCleanup'])
+                git poll: true, url: 'https://github.com/linwenjun/express-demo.git', branch: 'master'
+            }
+        }
 
         stage('npm test') {
             steps {
