@@ -27,7 +27,7 @@ pipeline {
 
         stage('test') {
             steps {
-                bat 'echo test'
+                bat 'npm restart'
             }
         }
 
