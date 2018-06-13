@@ -1,6 +1,4 @@
 const express = require('express')
-const _ = require('lodash')
-const jwt = require('jsonwebtoken');
 
 const app = express()
 
@@ -9,10 +7,7 @@ app.get('/token', function (req, res) {
 })
 
 app.get('*', function (req, res) {
-  const token = req.get('Authorization').replace(/^Bearer\s/, '');
-  jwt.verify(token, "ThisIsASecret", (err, decoded)=> {
-    res.send(JSON.parse(decoded.sub));
-  })
+  res.send("hello,world")
 })
 
 app.listen(3000, function () {
