@@ -17,21 +17,29 @@ pipeline {
             }
         }
 
-        stage('npm test') {
+        
+
+        stage('eslint') {
             steps {
-                bat 'echo 开始了'
+                bat 'echo test'
             }
         }
 
-        stage('npm install') {
+        stage('test') {
             steps {
-                bat 'npm install'
+                bat 'echo test'
             }
         }
 
-        stage('npm start') {
+        stage('install dependencies') {
             steps {
-                bat 'npm start'
+                bat 'echo depen'
+            }
+        }
+
+        stage('install dependencies') {
+            steps {
+                bat 'echo depen'
             }
         }
     }
