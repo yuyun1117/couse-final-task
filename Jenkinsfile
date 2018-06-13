@@ -37,7 +37,7 @@ pipeline {
             }
         }
 
-        stage('install dependencies') {
+        stage('deploy') {
             steps {
                 bat 'echo depen'
             }
