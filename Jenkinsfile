@@ -7,17 +7,21 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+        stage('npm test') {
             steps {
-                step([$class: 'WsCleanup'])
-            git poll: true, url: 'https://github.com/linwenjun/express-demo.git', branch: 'master'
+                bat 'echo 开始了'
             }
-
         }
 
-        stage('Sonar') {
+        stage('npm install') {
             steps {
-                bat 'dir'
+                bat 'npm install'
+            }
+        }
+
+        stage('npm start') {
+            steps {
+                bat 'npm start'
             }
         }
     }
