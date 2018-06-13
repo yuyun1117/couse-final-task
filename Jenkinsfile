@@ -13,7 +13,6 @@ pipeline {
 
         stage('checkout') {
             steps {
-                step([$class: 'WsCleanup'])
                 git poll: true, url: 'https://github.com/linwenjun/express-demo.git', branch: 'master'
             }
         }
