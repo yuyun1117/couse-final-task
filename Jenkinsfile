@@ -17,8 +17,6 @@ pipeline {
             }
         }
 
-        
-
         stage('eslint') {
             steps {
                 bat 'echo test'
@@ -27,19 +25,19 @@ pipeline {
 
         stage('test') {
             steps {
-                bat 'npm restart'
+                bat 'npm stop'
             }
         }
 
         stage('install dependencies') {
             steps {
-                bat 'echo depen'
+                bat 'echo install'
             }
         }
 
         stage('deploy') {
             steps {
-                bat 'echo depen'
+                bat 'echo deploy'
             }
         }
     }
