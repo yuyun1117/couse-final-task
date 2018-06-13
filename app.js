@@ -10,6 +10,13 @@ app.get('/token', function (req, res) {
   res.send("token");
 })
 
+app.get('/list', function(req, res) {
+  res.render('list', {list: [
+    {id: 1, name: "zzz"},
+    {id: 2, name: "xxx"}
+  ]})
+})
+
 app.get('*', function (req, res) {
   res.render('index', { title: 'Hey', message: 'Hello there!' })
 })
