@@ -3,6 +3,7 @@ const pug = require('pug')
 
 const app = express()
 
+//刘慧敏
 let rawList = [
   {id: 1, name: "数据库系统与原理"},
   {id: 2, name: "软件测试       "},
@@ -16,6 +17,7 @@ app.get('/token', function (req, res) {
   res.send("token");
 })
 
+//李萱 韩琦 项蕾
 app.get('/delete/:id', function(req, res) {
   
   let id = parseInt(req.params.id);
@@ -26,6 +28,7 @@ app.get('/delete/:id', function(req, res) {
   res.redirect("/list")
 })
 
+//石晓霞
 app.get('/edit/:id', function(req, res) {
   
   let id = parseInt(req.params.id);
