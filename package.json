@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "forever start app.js",
     "restart": "forever restart app.js",
-    "stop": "forever stop app.js"
+    "stop": "forever stop app.js",
+    "standard": "standard **/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,7 @@
     "forever": "^0.15.3",
     "pug": "^2.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
 }

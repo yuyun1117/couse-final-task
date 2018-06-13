@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage('eslint') {
+        stage('standard') {
             steps {
                 bat 'echo test'
             }
@@ -25,7 +25,7 @@ pipeline {
 
         stage('test') {
             steps {
-                bat 'npm stop'
+                bat 'echo test'
             }
         }
 
