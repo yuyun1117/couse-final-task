@@ -1,7 +1,14 @@
 html
   head
-    title= title
+    title 图书管理系统
   body
-    h1= message
+    h1= '      图书管理系统'
+    div 
+    a(href="./add/") 增加 |
+    a(href="./select/") 查询
+    div 图书编号 | 图书名称 | 操作1 | 操作2 |
+    
     each val in list
-      div #{val.id} | #{val.name}
+      div #{val.id}   |   #{val.name}  | 
+         a(href="./delete/" + val.id) 删除|
+         a(href="./edit/" + val.id) 编辑
